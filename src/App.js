@@ -17,6 +17,7 @@ function App() {
     <div className="flex container bg-black flex-col">
       <div className="mt-2 mb-2 ml-2 text-white text-3xl">Cloud App</div>
       <div className="flex flex-col justify-center items-center bg-slate-600">
+        {state === undefined && <p>Loading</p>}
         {state?.map((data, index) => (
           <TemperatureCard key={index} {...data} />
         ))}
